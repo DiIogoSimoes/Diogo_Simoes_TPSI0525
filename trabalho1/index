@@ -1,9 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT">
     <head>
         <title>Hello world</title>
+        <meta charset="utf8">
     </head>
     <body>
-        <p>Ola mundo</p>
+        <table border="1">
+            <tr>
+                <th>nome</th>
+                <th>idade</th>
+                <th>sexo</th>
+            </tr>
+            <tr>
+                <td>Diogo</td>
+                <td>21</td>
+                <td>mas</td>
+            </tr>
+            <tr>
+                <td>Joana</td>
+                <td>40</td>
+                <td>fem</td>
+            </tr>
+            <tr>
+                <td>joao</td>
+                <td>50</td>
+                <td>mas</td>
+            </tr>
+        </table>
     </body>
 </html>
