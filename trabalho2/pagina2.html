@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 2 - Tabela aninhada</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 120px;
+        }
+        .inner-table {
+            width: 100%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página 2</h1>
+    <h2>Tabela com Tabela Aninhada</h2>
+    <p>Agora vemos os carros com detalhes técnicos dentro de <b>tabelas internas</b>.<br>Informações como motor e potência estão incluídas.</p>
+
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Imagem</th>
+            <th>Especificações</th>
+        </tr>
+        <tr>
+            <td>BMW</td>
+            <td><img src="https://www.razaoautomovel.com/wp-content/uploads/2015/05/bme-serie-3-facelift-2015-15.jpg.webp" alt="BMW"></td>
+            <td>
+                <table class="inner-table">
+                    <tr><td><b>Motor:</b> 2.0 Turbo</td></tr>
+                    <tr><td><b>Potência:</b> 184cv</td></tr>
+                    <tr><td><b>Combustível:</b> Gasolina</td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Mercedes</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mercedes-Benz_W206_IMG_6380.jpg/1200px-Mercedes-Benz_W206_IMG_6380.jpg" alt="Mercedes"></td>
+            <td>
+                <table class="inner-table">
+                    <tr><td><b>Motor:</b> 2.0 Turbo</td></tr>
+                    <tr><td><b>Potência:</b> 204cv</td></tr>
+                    <tr><td><b>Combustível:</b> Diesel</td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <a href="index.html">Voltar à Index</a>
+</body>
+</html>
