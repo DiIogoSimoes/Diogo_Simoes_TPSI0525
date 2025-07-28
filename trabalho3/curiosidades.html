@@ -1,61 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <title>Curiosidades</title>
-  <style>
-    body { 
-    font: 16px Arial, sans-serif; margin: 0; background: #f0f0f0; 
-    }
-    .content-wrapper { 
-    display: flex; flex-direction: column; min-height: 100vh; 
-    }
-    header, footer { 
-    background: #114422; color: #fff; text-align: center; padding: 10px; 
-    }
-    nav a { 
-    color: #fff; margin: 0 10px; text-decoration: none; 
-    }
-    nav a:hover { 
-    text-decoration: underline; 
-    }
-    main { 
-    padding: 20px; flex: 1; text-align: center; 
-    }
-    ul { 
-    list-style: none; padding: 0; 
-    }
-    li { 
-    margin: 10px 0; 
-    }
-    img { 
-    margin-top: 20px; max-width: 600px; width: 100%; border-radius: 8px; 
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #005600;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover, nav a.active {
+            background-color: #007b00;
+            border-radius: 5px;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        main h1 {
+            color: #005600;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        li {
+            background-color: #e8ffe8;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        li span {
+            font-size: 1.5em;
+            color: #005600;
+        }
+        img {
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        footer {
+            background-color: #003300;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0 5px 0; /* AJUSTADO AQUI */
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            nav a {
+                padding: 10px;
+            }
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            main h1 {
+                font-size: 2em;
+            }
+            li {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="content-wrapper">
-    <header>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="curiosidades.html">Curiosidades</a>
-        <a href="contato.html">Contacto</a>
-      </nav>
-    </header>
-    <main>
-      <h1>Curiosidades sobre Tigres</h1>
-      <ul>
-        <li>🐅 Os tigres podem pesar até 300 kg.</li>
-        <li>🐾 Cada tigre tem listras únicas.</li>
-        <li>🌊 Adoram nadar e são excelentes nadadores.</li>
-        <li>🌙 Caçam sozinhos, normalmente à noite.</li>
-      </ul>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Panthera_tigris_tigris.jpg/330px-Panthera_tigris_tigris.jpg" alt="Tigre curioso">
-    </main>
-    <footer>
-      <p>&copy; 2025 - Tigres Selvagens</p>
-    </footer>
-  </div>
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="curiosidades.html" class="active">Curiosidades</a>
+                <a href="contato.html">Contacto</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Curiosidades sobre Tigres</h1>
+            <ul>
+                <li><span>🐅</span> Podem pesar até 300 kg e são os maiores felinos do mundo.</li>
+                <li><span>🐾</span> As suas listras são únicas, como as impressões digitais humanas.</li>
+                <li><span>🌊</span> Adoram nadar e são excelentes caçadores na água.</li>
+                <li><span>🌙</span> Caçam sozinhos, geralmente durante a noite.</li>
+                <li><span>🗣️</span> O rugido de um tigre pode ser ouvido a 3 km de distância!</li>
+            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Panthera_tigris_tigris.jpg/330px-Panthera_tigris_tigris.jpg" alt="Tigre curioso">
+        </main>
+        <footer>
+            <p>&copy; 2025 - Tigres Incríveis</p>
+        </footer>
+    </div>
 </body>
 </html>

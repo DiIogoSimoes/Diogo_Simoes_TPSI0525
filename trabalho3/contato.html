@@ -1,50 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto</title>
-  <style>
-    body { 
-        font: 16px Arial, sans-serif; margin: 0; background: #f0f0f0; }
-    .content-wrapper { 
-        display: flex; flex-direction: column; min-height: 100vh; 
-    }
-    header, footer { 
-        background: #114422; color: #fff; text-align: center; padding: 10px; 
-    }
-    nav a { 
-        color: #fff; margin: 0 10px; text-decoration: none; 
-    }
-    nav a:hover { 
-        text-decoration: underline; 
-    }
-    main { 
-        padding: 20px; flex: 1; text-align: center; 
-    }
-    img { 
-        margin-top: 15px; width: 150px; border-radius: 50%; 
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #005600;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover, nav a.active {
+            background-color: #007b00;
+            border-radius: 5px;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        main h1 {
+            color: #005600;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .contact-form-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        .contact-form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .contact-form-container button {
+            background-color: #005600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form-container button:hover {
+            background-color: #007b00;
+        }
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .contact-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 15px;
+            border: 3px solid #005600;
+        }
+        footer {
+            background-color: #003300;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0 5px 0; /* AJUSTADO AQUI */
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            nav a {
+                padding: 10px;
+            }
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            main h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="content-wrapper">
-    <header>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="curiosidades.html">Curiosidades</a>
-        <a href="contato.html">Contacto</a>
-      </nav>
-    </header>
-    <main>
-      <h1>Contacta-nos</h1>
-      <p>Email: info@tigresselvagens.pt</p>
-      <p>Instagram: @tigres.selvagens</p>
-      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlCkELgIbJRaXoyfj-26F2X7LI0mq-cMUHhkgUeHHNti0v3Rm3062lwmfdCTZYbcAFEV-IbHk29xbQgjZ9uRvoEQ" alt="Ícone de tigre">
-    </main>
-    <footer>
-      <p>&copy; 2025 - Tigres Selvagens</p>
-    </footer>
-  </div>
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="curiosidades.html">Curiosidades</a>
+                <a href="contato.html" class="active">Contacto</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Contacta-nos</h1>
+            <div class="contact-form-container">
+                <p>Envia-nos uma mensagem e teremos todo o gosto em responder!</p>
+                <form action="#" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:info@tigresincriveis.pt">info@tigresincriveis.pt</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/tigres.incriveis" target="_blank">@tigres.incriveis</a></p>
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlCkELgIbJRaXoyfj-26F2X7LI0mq-cMUHhkgUeHHNti0v3Rm3062lwmfdCTZYbcAFEV-IbHk29xbQgjZ9uRvoEQ" alt="Ícone de tigre">
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 - Tigres Incríveis</p>
+        </footer>
+    </div>
 </body>
 </html>
