@@ -1,7 +1,7 @@
-const num = require(prompt("➡ Digite um número inteiro: "));
+const num = require(prompt("➡ Escreva um número inteiro: "));
 
 function verificarPrimo() {
-    let num = parseInt(prompt("Digite um número inteiro: "));
+    let num = parseInt(prompt("Escreva um número inteiro: "));
 
     if (num <= 1) {
         console.log(`${num} NÃO é primo.`);

@@ -9,7 +9,7 @@ function pedirNumero() {
   let numero;
 
   function perguntar() {
-    rl.question("Digite um número entre 1 e 100: ", (input) => {
+    rl.question("Escreva um número entre 1 e 100: ", (input) => {
       numero = parseInt(input);
 
       if (numero >= 1 && numero <= 100) {

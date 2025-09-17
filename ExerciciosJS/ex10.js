@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 });
 
 function contarDivisores() {
-  rl.question("Digite um número inteiro: ", (input) => {
+  rl.question("Escreva um número inteiro: ", (input) => {
     let num = parseInt(input);
     let contador = 0;
 
